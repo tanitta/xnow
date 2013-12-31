@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>xnow</RootNamespace>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v110</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="..\..\..\libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<MinimalRebuild>true</MinimalRebuild>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxGui\libs;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxNetwork\libs;..\..\..\addons\ofxNetwork\src;..\..\..\addons\ofxBullet\libs;..\..\..\addons\ofxBullet\src;..\..\..\addons\ofxBullet\libs\bullet2.8.1;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\BroadphaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\CollisionDispatch;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\CollisionShapes;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\Gimpact;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\NarrowPhaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Character;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\ConstraintSolver;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Dynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Vehicle;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\DX11;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\DX11\HLSL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\AMD;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\Apple;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\Intel;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\MiniCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\NVidia;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\OpenCLC10;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\Shared;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\SpuNarrowPhaseCollisionTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\SpuSampleTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletSoftBody;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\LinearMath;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\MiniCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\MiniCL\MiniCLTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\neon;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\scalar;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\sse;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib\vs;..\..\..\addons\ofxBullet\src\events;..\..\..\addons\ofxBullet\src\joints;..\..\..\addons\ofxBullet\src\render;..\..\..\addons\ofxBullet\src\shapes</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);assimp.lib;BulletCollision_debug.lib;BulletDynamics_debug.lib;BulletSoftBody_debug.lib;LinearMath_debug.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib\vs</AdditionalLibraryDirectories>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\..\addons\ofx3DModelLoader\libs;..\..\..\addons\ofx3DModelLoader\src;..\..\..\addons\ofx3DModelLoader\src\3DS;..\..\..\addons\ofxAssimpModelLoader\libs;..\..\..\addons\ofxAssimpModelLoader\src;..\..\..\addons\ofxAssimpModelLoader\libs\assimp;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib;..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxGui\libs;..\..\..\addons\ofxGui\src;..\..\..\addons\ofxNetwork\libs;..\..\..\addons\ofxNetwork\src;..\..\..\addons\ofxBullet\libs;..\..\..\addons\ofxBullet\src;..\..\..\addons\ofxBullet\libs\bullet2.8.1;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\BroadphaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\CollisionDispatch;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\CollisionShapes;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\Gimpact;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletCollision\NarrowPhaseCollision;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Character;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\ConstraintSolver;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Dynamics;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletDynamics\Vehicle;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\DX11;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\DX11\HLSL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\AMD;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\Apple;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\Intel;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\MiniCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\NVidia;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\OpenCLC10;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\GpuSoftBodySolvers\Shared;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\SpuNarrowPhaseCollisionTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletMultiThreaded\SpuSampleTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\BulletSoftBody;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\LinearMath;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\MiniCL;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\MiniCL\MiniCLTask;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\neon;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\scalar;..\..\..\addons\ofxBullet\libs\bullet2.8.1\include\vectormath\sse;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib\vs;..\..\..\addons\ofxBullet\src\events;..\..\..\addons\ofxBullet\src\joints;..\..\..\addons\ofxBullet\src\render;..\..\..\addons\ofxBullet\src\shapes</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies);assimp.lib;BulletCollision.lib;BulletDynamics.lib;BulletSoftBody.lib;LinearMath.lib</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);..\..\..\addons\ofxAssimpModelLoader\libs\assimp\lib\vs;..\..\..\addons\ofxBullet\libs\bullet2.8.1\lib\vs</AdditionalLibraryDirectories>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="src\main.cpp" />
+		<ClCompile Include="src\testApp.cpp" />
+		<ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\3DS\model3DS.cpp" />
+		<ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\3DS\texture3DS.cpp" />
+		<ClCompile Include="..\..\..\addons\ofx3DModelLoader\src\ofx3dModelLoader.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxBaseGui.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxButton.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxLabel.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxPanel.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSlider.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxTCPClient.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxTCPManager.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxTCPServer.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxNetwork\src\ofxUDPManager.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\joints\ofxBulletJoint.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\ofxBulletWorldRigid.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\render\GLDebugDrawer.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletBaseShape.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletBox.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCapsule.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCone.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletConvexShape.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCustomShape.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCylinder.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletSphere.cpp" />
+		<ClCompile Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletStaticPlane.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\testApp.h" />
+		<ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\model3DS.h" />
+		<ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\texture3DS.h" />
+		<ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\3DS\Vector3DS.h" />
+		<ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\ofx3DBaseLoader.h" />
+		<ClInclude Include="..\..\..\addons\ofx3DModelLoader\src\ofx3DModelLoader.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpTexture.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpUtils.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiAnim.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiAssert.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiCamera.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiColor4D.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiConfig.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiDefines.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiFileIO.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiLight.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMaterial.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix3x3.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMatrix4x4.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiMesh.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiPostProcess.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiQuaternion.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiScene.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiTexture.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiTypes.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVector2D.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVector3D.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\aiVersion.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\assimp.hpp" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler\poppack1.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Compiler\pushpack1.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\DefaultLogger.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\IOStream.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\IOSystem.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\Logger.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\LogStream.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\NullLogger.h" />
+		<ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\libs\assimp\include\ProgressHandler.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxBaseGui.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxButton.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGui.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxGuiGroup.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxLabel.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxPanel.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSlider.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
+		<ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxNetwork.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxNetworkUtils.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxTCPClient.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxTCPManager.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxTCPServer.h" />
+		<ClInclude Include="..\..\..\addons\ofxNetwork\src\ofxUDPManager.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\events\ofxBulletCollisionData.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\events\ofxBulletMousePickEvent.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\events\ofxBulletRaycastData.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\joints\ofxBulletJoint.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\ofxBullet.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\ofxBulletConstants.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\ofxBulletUserData.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\ofxBulletUtils.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\ofxBulletWorldRigid.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\render\GLDebugDrawer.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletBaseShape.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletBox.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCapsule.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCone.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletConvexShape.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCustomShape.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletCylinder.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletSphere.h" />
+		<ClInclude Include="..\..\..\addons\ofxBullet\src\shapes\ofxBulletStaticPlane.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\..\..\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc">
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+		</ResourceCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>
